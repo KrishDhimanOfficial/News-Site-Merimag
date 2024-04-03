@@ -23,10 +23,12 @@ ul,
 ol {
     list-style: none;
 }
-button{
+
+button {
     border: 0;
     cursor: pointer;
 }
+
 img {
     display: block;
 }
@@ -37,6 +39,10 @@ span {
     text-decoration: none;
 }
 
+section {
+    margin-block: 60px;
+}
+
 .container {
     max-width: 1140px;
 }
@@ -44,15 +50,25 @@ span {
 .bd {
     border: 1px solid #000;
 }
-.main-btn{
+
+.main-btn {
     border-radius: 10px;
     color: var(--color);
     font: 700 12px var(--font);
     background: var(--primary-color);
 }
-.ad-btn{
+
+.ad-btn {
     top: 22px;
     right: 20px;
+}
+
+.red {
+    transition: all .5s;
+
+    &:hover {
+        color: var(--primary-color);
+    }
 }
 
 /* header css  */
@@ -60,12 +76,16 @@ header {
     border-top: 3px solid var(--primary-color);
     border-bottom: 3px solid var(--primary-color);
 }
+
 #infobar {
     background: var(--secondary-color);
     font: 400 13px var(--font);
-    .info-links,.social-links{
+
+    .info-links,
+    .social-links {
         color: var(--color);
-        &:hover{
+
+        &:hover {
             color: var(--primary-color);
         }
     }
@@ -84,33 +104,39 @@ header {
 
 #headlines {
     overflow: hidden;
+
     .head_news {
         color: var(--color);
-        .news_date{
+
+        .news_date {
             color: var(--text-color);
         }
     }
 }
-nav{
-    .track{
+
+nav {
+    .track {
         width: 100%;
         height: 4px;
-        background:  #f0f0f0;
+        background: #f0f0f0;
     }
 }
-#primary-menu{
-    .active{
+
+#primary-menu {
+    .active {
         color: var(--primary-color);
-        border-top:3px solid var(--primary-color) ;
+        border-top: 3px solid var(--primary-color);
         position: relative;
         top: -3px;
-    } 
-    & li:first-child a{
-        &::before{
+    }
+
+    & li:first-child a {
+        &::before {
             display: none;
         }
     }
-    & a{
+
+    & a {
         line-height: 48px !important;
         color: var(--black);
         padding-inline: 15px;
@@ -118,48 +144,100 @@ nav{
         font: 600 13px var(--font);
         position: relative;
         transition: all .5s;
-        .fa-solid{
+
+        .fa-solid {
             margin-inline: 5px;
         }
-        &::before{
+
+        &::before {
             content: "";
             position: absolute;
             top: -4px;
             left: 0;
             width: 0;
             height: 3px;
-            border-top:2px solid var(--primary-color) ;
+            border-top: 2px solid var(--primary-color);
             background: var(--primary-color);
             transition: all .5s;
         }
-        &:hover{
+
+        &:hover {
             color: var(--primary-color);
-            &::before{
+
+            &::before {
                 width: 100%;
             }
         }
     }
 }
-#search{
+
+#search {
     background: var(--color);
 }
-#searchbox{
+
+#searchbox {
     opacity: 0;
     width: 250px;
-    padding: 8px;
-    border: 1px solid #000;
+    padding: 15px 20px;
+    box-shadow: 0 0 20px 3px var(--text-color);
+    position: absolute;
     transition: all .8s;
-    & input{
-        width: 80%;
+
+    & input {
+        width: 84%;
         padding: 2px 3px;
     }
-    .fa-solid{
+
+    .fa-solid {
         color: var(--color);
         background: var(--primary-color);
     }
 }
-#searchbox.active{
+
+#searchbox.active {
     opacity: 1;
-    transform: translateY(60px);
+    transform: translateY(50px);
 }
+
 /* header css ended */
+/* Main css */
+#news_masonary {
+    .news {
+        margin: 2px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(138deg , transparent, red);
+        }
+
+        .news_head {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            z-index: 999;
+
+            .news_category{
+                font: 700 10px var(--font);
+                padding: 5px 8px;
+                border-radius: 3px;
+                text-transform: uppercase;
+                color: var(--color);
+                background: var(--primary-color);
+            }
+            .news_headling{
+                margin-block: 6px;
+                color: var(--color);
+                font: 700 22px/25px var(--font);
+            }
+            .news_date{
+                color: var(--text-color);
+                font: 400 11px/16px var(--font);
+            }
+        }
+    }
+}
+
+/* Main css ended */
