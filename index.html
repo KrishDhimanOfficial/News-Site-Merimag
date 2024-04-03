@@ -15,47 +15,108 @@
 
 <body>
     <header>
-        <div id="infobar" class="container">
-            <div class="row">
-                <div class="col-8">
-                    <span id="site-time" class=" py-3 me-2">
-                        <i class="fa-solid fa-clock-rotate-left"></i>
-                        Monday 1 April 2024
-                    </span>
-                    <span id="tag" class="text-uppercase">
-                        <i class="fa-solid fa-bolt me-2"></i>
-                        Trending
-                    </span>
-                    <ul id="headlines" class="d-flex p-0 m-0 float-end py-3">
-                        <li>
-                            <a href="" class="head_news">
-                                <span class="news_date">
-                                    <i class="fa-solid fa-clock-rotate-left"></i>
-                                    May 16, 2022
-                                </span>
-                                Imagination will often carry us to worlds that never were
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-4">
-                    <ul class="d-flex gap-3 p-0 m-0  py-3 float-start">
-                        <li><a href="" class="info-links">Blog</a></li>
-                        <li><a href="" class="info-links">Forums</a></li>
-                        <li><a href="" class="info-links">Shop</a></li>
-                        <li><a href="" class="info-links">Contact</a></li>
-                    </ul>
-                    <ul class="d-flex gap-3 p-0 m-0  py-3 float-end">
-                        <li><a href="" class="fa-brands fa-facebook-f social-links"></a></li>
-                        <li><a href="" class="fa-brands fa-twitter social-links"></a></li>
-                        <li><a href="" class="fa-brands fa-pinterest-p social-links"></a></li>
-                        <li><a href="" class="fa-brands fa-instagram social-links"></a></li>
-                        <li><a href="" class="fa-regular fa-envelope social-links"></a></li>
-                    </ul>
+        <div id="infobar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8">
+                        <span id="site-time" class=" py-3 me-2">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            Monday 1 April 2024
+                        </span>
+                        <span id="tag" class="text-uppercase">
+                            <i class="fa-solid fa-bolt me-2"></i>
+                            Trending
+                        </span>
+                        <ul id="headlines" class="d-flex gap-2 p-0 m-0 float-end py-3 ">
+                            <li>
+                                <a href="" class="head_news">
+                                    <span class="news_date">
+                                        <i class="fa-solid fa-clock-rotate-left"></i>
+                                        May 16, 2022
+                                    </span>
+                                    Imagination will often carry us to worlds that never were
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <ul class="d-flex gap-3 p-0 m-0  py-3 float-start">
+                            <li><a href="" class="info-links">Blog</a></li>
+                            <li><a href="" class="info-links">Forums</a></li>
+                            <li><a href="" class="info-links">Shop</a></li>
+                            <li><a href="" class="info-links">Contact</a></li>
+                        </ul>
+                        <ul class="d-flex gap-3 p-0 m-0  py-3 float-end">
+                            <li><a href="" class="fa-brands fa-facebook-f social-links"></a></li>
+                            <li><a href="" class="fa-brands fa-twitter social-links"></a></li>
+                            <li><a href="" class="fa-brands fa-pinterest-p social-links"></a></li>
+                            <li><a href="" class="fa-brands fa-instagram social-links"></a></li>
+                            <li><a href="" class="fa-regular fa-envelope social-links"></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-3 p-0">
+                    <a href=""><img src="images/logo.png" alt="" class="img-fluid"></a>
+                </div>
+                <div class="col-7 p-0 position-relative">
+                    <a href=""><img src="images/ad-728x90.png" alt="" class="img-fluid py-1"></a>
+                    <div class="position-absolute ad-btn">
+                        <a href="" class="text-uppercase main-btn py-3 px-3">Merimag</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="track"></div>
+            <div id="navbar" class="container">
+                <div class="row">
+                    <div class="col-8 me-auto d-flex align-items-center">
+                        <ul id="primary-menu" class="d-flex align-items-center m-0 p-0">
+                            <li><a href="" class="active">Home</a></li>
+                            <li><a href="">
+                                    <i class="fa-regular fa-newspaper"></i>
+                                    News
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </a>
+                            </li>
+                            <li><a href="">
+                                    <i class="fa-solid fa-wand-magic"></i>
+                                    Design
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </a></li>
+                            <li><a href="">
+                                    <i class="fa-solid fa-plug"></i>
+                                    Features
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </a></li>
+                            <li><a href="">
+                                    <i class="fa-solid fa-play"></i>
+                                    Video
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </a></li>
+                            <li><a href="">
+                                    <i class="fa-solid fa-hashtag"></i>
+                                    Categories
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <div id="searchbox" class="float-start ms-5">
+                            <input type="text" name="" id="" placeholder="search for..." class=" float-start">
+                            <button class="fa-solid fa-magnifying-glass p-2"></button>
+                        </div>
+                        <button id="search" class="fa-solid fa-magnifying-glass float-end py-3 border-0"></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
+    <script src="javascript/index.js"></script>
 </body>
 
 </html>
