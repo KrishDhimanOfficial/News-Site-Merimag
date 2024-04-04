@@ -6,8 +6,8 @@ search_btn.addEventListener("click", ()=>{
 });
 
 // news masonry
-var colors = ["red","green","purple","blue","orange","yellow","lightblue"];
-var set_prop = document.querySelectorAll(".news");
+const colors = ["red","green","purple","blue","orange","yellow","lightblue"];
+const set_prop = document.querySelectorAll("#news_masonary .news");
 
 let i = 0;
 set_prop.forEach(set_prop => {

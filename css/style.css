@@ -70,6 +70,19 @@ section {
         color: var(--primary-color);
     }
 }
+.sec-heading{
+    padding-block: 5px;
+    border-top:5px solid var(--primary-color) ;
+    border-bottom:1px solid var(--text-color) ;
+    & h2{
+        font: 700 14px var(--font);
+    }
+    & a{
+        color: var(--black);
+        text-transform: uppercase;
+        font: 500 13px var(--font);
+    }
+}
 
 /* header css  */
 header {
