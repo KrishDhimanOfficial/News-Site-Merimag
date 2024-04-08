@@ -43,6 +43,9 @@ section {
     margin-block: 60px;
 }
 
+article{
+    margin-block: 20px;
+}
 .container {
     max-width: 1140px;
 }
@@ -57,6 +60,10 @@ section {
     font: 700 12px var(--font);
     background: var(--primary-color);
 }
+.fixed{
+    position: fixed;
+    transition: all .7s;
+}
 
 .ad-btn {
     top: 22px;
@@ -70,20 +77,136 @@ section {
         color: var(--primary-color);
     }
 }
-.sec-heading{
+.sec-heading {
     padding-block: 5px;
-    border-top:5px solid var(--primary-color) ;
-    border-bottom:1px solid var(--text-color) ;
-    & h2{
+    border-top: 3px solid var(--primary-color);
+    border-bottom: 1px solid var(--text-color);
+
+    & h2 {
+        margin-bottom: 0;
         font: 700 14px var(--font);
     }
-    & a{
+
+    & a {
         color: var(--black);
         text-transform: uppercase;
         font: 500 13px var(--font);
     }
 }
+.bd-top-g{
+    border-top: 3px solid #2bbf64;
+}
+.bd-top-b{
+    border-top: 3px solid #337ae5;
+}
+.news_box {
+    position: relative;
 
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(164, 165, 164, 0.4);
+    }
+
+    .news_imgage {
+        min-height: 480px;
+    }
+
+    .main_content {
+        position: absolute;
+        inset: 70% 10px;
+
+        .news_headling {
+            margin-block: 6px;
+            color: var(--color);
+            font: 700 27px/25px var(--font);
+        }
+
+        .news_date {
+            color: var(--text-color);
+            font: 400 11px/16px var(--font);
+        }
+       .count{
+            color: var(--text-color); 
+             font: 400 13px var(--font);
+        }
+    }
+}
+.article{
+    .article_img img{
+        aspect-ratio: 1/0.7;
+    }
+}
+.news_category {
+    font: 700 10px var(--font);
+    padding: 5px 8px;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: var(--color);
+    background: var(--primary-color);
+}
+/* colors */
+.green{
+    color: #2bbf64;
+}
+.g-bg{
+    background: #2bbf64;
+}
+.blue{
+    color: #337ae5;
+}
+.b-bg{
+    background: #337ae5;
+}
+/* colors */
+
+.news_list {
+    .n_img {
+        width: 112px;
+        height: 80px;
+    }
+
+    .title {
+        max-width: 265px;
+        color: var(--black);
+        font: 700 16px var(--font);
+    }
+    .date{
+        font: 400 11px var(--font);
+    }
+}
+/* scoial media links  css*/
+#s_media{
+    max-width: 285px;
+    transition: all .5s;
+}
+.scoial_media{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & i {
+        border-radius: 50%;
+        color: var(--color);
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 25px;
+        text-align: center;
+        margin-block: 5px;
+    }
+    .scoial_page,.tagline{
+        color: var(--text-color);
+        margin-bottom: 2px;
+        text-transform: uppercase;
+        font: 500 8px var(--font);
+    }
+    .scoial_page{
+        color: var(--grey);
+        font: 500 12px var(--font);
+    }
+}
 /* header css  */
 header {
     border-top: 3px solid var(--primary-color);
@@ -220,7 +343,8 @@ nav {
     .news {
         margin: 2px;
         position: relative;
-        .news_img{
+
+        .news_img {
             position: relative;
             z-index: -999;
         }
@@ -231,7 +355,7 @@ nav {
             bottom: 10px;
             z-index: 999;
 
-            .news_category{
+            .news_category {
                 font: 700 10px var(--font);
                 padding: 5px 8px;
                 border-radius: 3px;
@@ -239,12 +363,14 @@ nav {
                 color: var(--color);
                 background: var(--primary-color);
             }
-            .news_headling{
+
+            .news_headling {
                 margin-block: 6px;
                 color: var(--color);
                 font: 700 22px/25px var(--font);
             }
-            .news_date{
+
+            .news_date {
                 color: var(--text-color);
                 font: 400 11px/16px var(--font);
             }
