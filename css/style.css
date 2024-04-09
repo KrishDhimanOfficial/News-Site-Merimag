@@ -11,6 +11,8 @@
     --color: #fff;
     --black: #000;
     --grey: #4b4b4b;
+    --green:#2bbf64;
+    --blue:#337ae5;
     --text-color: #cbcbcb;
     --font: "Inter", sans-serif;
 }
@@ -136,6 +138,20 @@ article{
 .article{
     .article_img img{
         aspect-ratio: 1/0.7;
+    }
+    .article-left,.article-right{
+        font: 700 19px var(--font);
+        color: var(--black);
+    }
+    .article-left a{
+        &:hover{
+            color: var(--green);
+        }
+    }
+    .article-right a{
+        &:hover{
+            color: var(--blue);
+        }
     }
 }
 .news_category {

@@ -32,11 +32,12 @@ window.addEventListener("scroll",()=>{
     console.clear();
     console.log(top);
     
-    if( top >= 904){
+    if( top >= 904 && top <= 1650){
         fixed.classList.add("fixed");
         fixed.style.top =`${0}px`;
         fixed.style.left =`${left}px`;
-    }else{
+    }
+    else{
         fixed.classList.remove("fixed");
     }
 });
