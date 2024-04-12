@@ -30,9 +30,9 @@ window.addEventListener("scroll",()=>{
     var top = window.scrollY;
     var left = fixed.offsetLeft;
     console.clear();
-    console.log(top);
+    console.log(left);
     
-    if( top >= 904 && top <= 1650){
+    if( top >= 904 && top <= 170){
         fixed.classList.add("fixed");
         fixed.style.top =`${0}px`;
         fixed.style.left =`${left}px`;
