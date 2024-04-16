@@ -6,13 +6,13 @@ search_btn.addEventListener("click", ()=>{
 });
 
 // news masonry
-const colors = ["red","green","purple","blue","orange","yellow","lightblue"];
+const colors = ["red","green","purple","blue","orange","lightblue"];
 const set_prop = document.querySelectorAll("#news_masonary .news");
 
 var i = 0;
 set_prop.forEach(set_prop => {
     set_prop.style.setProperty("background-image", `linear-gradient(138deg , transparent, ${colors[i]})`);
-    i < colors.length ? ++i :false;
+    i < colors.length  ? ++i : false;
 });
 
 // scoial media
@@ -30,9 +30,9 @@ window.addEventListener("scroll",()=>{
     var top = window.scrollY;
     var left = fixed.offsetLeft;
     console.clear();
-    console.log(left);
+    console.log();
     
-    if( top >= 904 && top <= 170){
+    if( top >= 904 && top <= 1750){
         fixed.classList.add("fixed");
         fixed.style.top =`${0}px`;
         fixed.style.left =`${left}px`;

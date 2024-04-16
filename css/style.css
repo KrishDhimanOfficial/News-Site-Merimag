@@ -32,6 +32,7 @@ ol {
 button {
     border: 0;
     cursor: pointer;
+    background: none;
 }
 
 img {
@@ -84,6 +85,11 @@ article {
     &:hover {
         color: var(--primary-color);
     }
+}
+.star_rating{
+    color: var(--primary-color);
+    display: flex;
+    font-size: 10px;
 }
 
 .sec-heading {
@@ -245,14 +251,18 @@ article {
 
 .news_list {
     .n_img {
-        width: 112px;
-        height: 80px;
+        width: 110px;
+        height: 75px;
     }
 
     .title {
         max-width: 265px;
         color: var(--black);
         font: 700 16px var(--font);
+
+        &:hover{
+            color: var(--primary-color);
+        }
     }
 
     .date {
@@ -266,7 +276,7 @@ article {
 
 /* scoial media links  css*/
 #s_media {
-    max-width: 285px;
+    max-width: 280px;
     transition: all .5s;
 }
 
