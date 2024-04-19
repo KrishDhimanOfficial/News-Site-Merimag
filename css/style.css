@@ -37,6 +37,8 @@ button {
 
 img {
     display: block;
+    width: 100%;
+    height: auto;
 }
 
 a,
@@ -49,10 +51,6 @@ section {
     margin-block: 60px;
 }
 
-article {
-    margin-block: 20px;
-}
-
 .container {
     max-width: 1140px;
     padding: 0;
@@ -61,6 +59,12 @@ article {
 .bd {
     border: 1px solid #000;
 }
+/* site ads css */
+.ad{
+    width: 95%;
+    margin: 30px 10px 0 auto;
+}
+/* site ads css */
 
 .main-btn {
     border-radius: 10px;
@@ -91,6 +95,31 @@ article {
     display: flex;
     font-size: 10px;
 }
+/* prevoius, next button */
+.prev{
+    color: var(--text-color);
+    font: 700 13px arial;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    &:hover{
+        color: #eca587;
+    }
+}
+.next{
+    border: 1px solid var(--text-color);
+    padding: 5px 15px;
+    text-transform: uppercase;
+    font: 700 13px arial;
+    &:hover{
+        color: var(--brown);
+    }
+}
+.pageshow{
+    color: #717171;
+    font: 400 13px var(--font);
+    margin-left: 8px;
+}
+/* prevoius, next button */
 
 .sec-heading {
     padding-block: 5px;
@@ -129,7 +158,7 @@ article {
         background: rgba(164, 165, 164, 0.4);
     }
     .news_imgage {
-        min-height: 480px;
+        min-height: 460px;
 
     }
 
@@ -181,6 +210,9 @@ article {
 
         .writer-name {
             text-transform: uppercase;
+        }
+        & i{
+            margin-right: 7px;
         }
     }
 
@@ -276,7 +308,7 @@ article {
 
 /* scoial media links  css*/
 #s_media {
-    max-width: 280px;
+    max-width: 290px;
     transition: all .5s;
 }
 
@@ -437,19 +469,23 @@ nav {
 #searchbox.active {
     visibility: visible;
     opacity: 1;
-    transform: translateY(50px);
+    transform: translateY(52px);
 }
 
 /* header css ended */
 /* Main css */
 #news_masonary {
+    columns: 3;
+    column-gap:0;
+
     .news {
-        margin: 2px;
+        margin:0 5px 5px;
         position: relative;
 
         .news_img {
             position: relative;
             z-index: -999;
+            height: 100%;
         }
 
         .news_head {
@@ -479,6 +515,17 @@ nav {
             }
         }
     }
+    .item-1{
+        height: 370px;
+    }
+    .item-2{
+        height: 180px;
+    }
+}
+/* background overlay */
+#backgorundOverlay{
+    background: url(../images/49-13.jpg) no-repeat center center;
+    background-size: cover;
 }
 
 /* Main css ended */
