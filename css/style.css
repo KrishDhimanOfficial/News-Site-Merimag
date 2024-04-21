@@ -28,7 +28,9 @@ ol {
     margin: 0;
     list-style: none;
 }
-
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
 button {
     border: 0;
     cursor: pointer;
@@ -185,6 +187,7 @@ section {
 }
 
 .article {
+    margin-top: 20px;
     .article_img img {
         aspect-ratio: 1/0.7;
     }
@@ -307,10 +310,10 @@ section {
 }
 
 /* scoial media links  css*/
-#s_media {
+/* #s_media {
     max-width: 290px;
     transition: all .5s;
-}
+} */
 
 .scoial_media {
     display: flex;
@@ -374,6 +377,9 @@ header {
 }
 
 #headlines {
+    padding-block: 15px;
+    margin-left: 20px;
+    display: flex;
     overflow: hidden;
 
     .head_news {
@@ -423,7 +429,7 @@ nav {
         &::before {
             content: "";
             position: absolute;
-            top: -4px;
+            top: -4.5px;
             left: 0;
             width: 0;
             height: 3px;
@@ -475,11 +481,12 @@ nav {
 /* header css ended */
 /* Main css */
 #news_masonary {
-    columns: 3;
-    column-gap:0;
+    column-count: 3;
+    gap: 10px;
 
     .news {
-        margin:0 5px 5px;
+        display: inline-block;
+        width: 100%;
         position: relative;
 
         .news_img {
@@ -516,12 +523,22 @@ nav {
         }
     }
     .item-1{
-        height: 370px;
+        height: 365px;
     }
     .item-2{
         height: 180px;
     }
 }
+@media (max-width: 992px) {
+    #news_masonary {
+        columns: 2;
+    }
+ }
+ @media (max-width: 576px) {
+    #news_masonary {
+        columns: 1;
+    }
+ }
 /* background overlay */
 #backgorundOverlay{
     background: url(../images/49-13.jpg) no-repeat center center;
