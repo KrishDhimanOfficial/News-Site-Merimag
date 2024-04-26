@@ -43,9 +43,19 @@ scoial_media.forEach(scoial_media => {
 });
 
 var fixed = document.querySelector("#s_media");
-
+var left = fixed.getBoundingClientRect().left;
 window.addEventListener("scroll", () => {
     var top = window.scrollY;
+    console.clear();
+    console.log(top)
+    
+    if(top > 880 && top < 1750){
+        fixed.classList.add("fixed");
+        fixed.style.left = `${left}px`;
+    }
+    else{
+        fixed.classList.remove("fixed");
+    }
 });
 
 
