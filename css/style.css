@@ -6,7 +6,7 @@
 }
 
 :root {
-    --primary-color: #e32022;
+    --primary-color: rgb(227, 32, 34);
     --secondary-color: #242424;
     --color: #fff;
     --black: #000;
@@ -273,36 +273,6 @@ section {
     background: var(--primary-color);
 }
 
-/* Hover colors effect */
-#general_news {
-    & a:hover:not(.news_category) {
-        color: var(--green);
-    }
-
-    .news_category {
-        background: var(--green);
-    }
-}
-
-#event_news {
-    & a:hover:not(.news_category) {
-        color: var(--blue);
-    }
-
-    .news_category {
-        background: var(--blue);
-    }
-}
-
-#top_news {
-    & a:hover:not(.news_category) {
-        color: var(--brown);
-    }
-
-    .news_category {
-        background: var(--brown);
-    }
-}
 .news_list {
     .n_img {
         width: 110px;
@@ -578,11 +548,57 @@ nav {
         columns: 1;
     }
 }
+/* Hover colors effect */
+#general_news {
+    & a:hover:not(.news_category) {
+        color: var(--green);
+    }
 
+    .news_category {
+        background: var(--green);
+    }
+}
+
+#event_news {
+    & a:hover:not(.news_category) {
+        color: var(--blue);
+    }
+
+    .news_category {
+        background: var(--blue);
+    }
+}
+
+#top_news {
+    & a:hover:not(.news_category) {
+        color: var(--brown);
+    }
+
+    .news_category {
+        background: var(--brown);
+    }
+}
 /* background overlay */
 #backgorundOverlay {
+    padding: 15px 0;
+    clip-path: polygon(25% 6%, 100% 1%, 100% 99%, 100% 93%, 0 100%, 0 0);
     background: url(../images/49-13.jpg) no-repeat center center;
     background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(227, 32, 34, .8);
+    }
+    .row{
+        position: relative;
+        z-index: 10;
+    }
+    .fa-play{
+        color: var(--color);
+    }
 }
 
 /* Main css ended */
