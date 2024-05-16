@@ -52,7 +52,27 @@ window.addEventListener("scroll", () => {
     console.log(top)
 });
 
+// tabs links
+const tab_button = document.querySelectorAll(".tabs_links button");
 
+tab_button.forEach(btn => {
+    btn.addEventListener("click", () => {
+        var tab_name = btn.dataset.tab;
+        var tab_content = document.querySelector(`#${tab_name}`);
+        var alltab_content = document.querySelectorAll('.tab_content');
+        
+        for (let i = 0; i <= tab_button.length; ++i) {
+            if (tab_button[i] != btn) {
+                tab_button[i].classList.remove("active");
+                alltab_content[i].style.display = 'none';
+            }
+            else{
+                tab_button[i].classList.add("active");
+                tab_content.style.display = 'block';
+            }
+        }
+    });
+});
 
 
 
