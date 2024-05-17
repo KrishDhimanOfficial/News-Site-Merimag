@@ -8,23 +8,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media_qurie.css">
 </head>
 
 <body>
     <header>
-        <div id="infobar">
+        <div id="infobar" class="d-lg-block d-none">
             <div class="container">
                 <div class="row">
                     <div class="col-8 d-flex gap-2">
-                        <span id="site-time" class=" py-3 me-2">
+                        <span id="site-time">
                             <i class="fa-solid fa-clock-rotate-left"></i> Monday 1 April 2024
                         </span>
-                        <span id="tag" class="text-uppercase">
-                            <i class="fa-solid fa-bolt me-2"></i>
-                            Trending
+                        <span id="tag">
+                            <i class="fa-solid fa-bolt"></i>Trending
                         </span>
                         <div id="headlines">
                             <a href="#" class="head_news">
@@ -35,43 +35,47 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <ul class="d-flex gap-3 p-0 m-0  py-3 float-start">
-                            <li><a href="#" class="info-links">Blog</a></li>
-                            <li><a href="#" class="info-links">Forums</a></li>
-                            <li><a href="#" class="info-links">Shop</a></li>
-                            <li><a href="#" class="info-links">Contact</a></li>
+                    <div class="col-4 top_links">
+                        <ul class="info-links">
+                            <li><a href="#" class="links">Blog</a></li>
+                            <li><a href="#" class="links">Forums</a></li>
+                            <li><a href="#" class="links">Shop</a></li>
+                            <li><a href="#" class="links">Contact</a></li>
                         </ul>
-                        <ul class="d-flex gap-3 p-0 m-0  py-3 float-end">
-                            <li><a href="#" class="fa-brands fa-facebook-f social-links"></a></li>
-                            <li><a href="#" class="fa-brands fa-twitter social-links"></a></li>
-                            <li><a href="#" class="fa-brands fa-pinterest-p social-links"></a></li>
-                            <li><a href="#" class="fa-brands fa-instagram social-links"></a></li>
-                            <li><a href="#" class="fa-regular fa-envelope social-links"></a></li>
+                        <ul class="info-links">
+                            <li><a href="#" class="fa-brands fa-facebook-f links"></a></li>
+                            <li><a href="#" class="fa-brands fa-twitter links"></a></li>
+                            <li><a href="#" class="fa-brands fa-pinterest-p links"></a></li>
+                            <li><a href="#" class="fa-brands fa-instagram links"></a></li>
+                            <li><a href="#" class="fa-regular fa-envelope links"></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="row d-flex justify-content-between align-items-center">
-                <div class="col-3 p-0">
-                    <a href="#"><img src="images/logo.png" alt="" class=""></a>
+            <div id="merimag_header" class="row">
+                <div class="col-lg-3">
+                    <div class="merimag-logo">
+                        <i class="fa-solid fa-bars"></i>
+                        <a href="#"><img src="images/logo.png" alt=""></a>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </div>
-                <div class="col-7 p-0 position-relative">
-                    <a href="#"><img src="images/ad-728x90.png" alt="" class=" py-1"></a>
-                    <div class="position-absolute ad-btn">
-                        <a href="#" class="text-uppercase main-btn py-3 px-3">Merimag</a>
+                <div class="col-7 ad_block d-lg-block d-none">
+                    <a href="#"><img src="images/ad-728x90.png" alt=""></a>
+                    <div class="ad-btn">
+                        <a href="#" class="main-btn">Merimag</a>
                     </div>
                 </div>
             </div>
         </div>
-        <nav>
+        <nav class="d-lg-block d-none">
             <div class="track"></div>
             <div id="navbar" class="container">
                 <div class="row">
-                    <div class="col-8 me-auto d-flex align-items-center">
-                        <ul id="primary-menu" class="d-flex align-items-center m-0 p-0">
+                    <div class="col-8 p-lg-0">
+                        <ul id="primary-menu">
                             <li><a href="#" class="active">Home</a></li>
                             <li><a href="#">
                                     <i class="fa-regular fa-newspaper"></i>
@@ -184,10 +188,10 @@
         <!-- News Masonary ended -->
         <section class="container">
             <div class="row row-cols-2 justify-content-between">
-                <div class="col-8 p-0 ">
+                <div class="col-md-8 col-12">
                     <div class="sec-heading me-auto d-flex align-items-center justify-content-between">
-                        <h2 class="text-uppercase m-0">Hot News</h2>
-                        <ul class="d-flex gap-3">
+                        <h2>Hot News</h2>
+                        <ul class="section_links">
                             <li><a href="#" class="red">Hot</a></li>
                             <li><a href="#" class="red">Best</a></li>
                             <li><a href="#" class="red">Top Rated</a></li>
@@ -198,14 +202,13 @@
                             <li><a href="#" class="red">More <i class="fa-solid fa-angle-down ms-1"></i></a></li>
                         </ul>
                     </div>
-                    <div class="row row-cols-2 my-4">
-                        <div class="col-6">
+                    <div class="row row-cols-sm-2 row-cols-auto my-4">
+                        <div class="col">
                             <article class="news_box">
                                 <img src="images/1.jpeg" alt="" class="news_imgage">
                                 <div class="main_content">
                                     <a href="#" class="news_category">Reports</a>
-                                    <h2><a href="#" class="news_headling">Why you never see that actuallyworks likea
-                                            chapter in a book</a></h2>
+                                    <h2><a href="#" class="news_headling">Why you never see that actually....</a></h2>
                                     <div class="d-flex justify-content-between">
                                         <a href="#" class="news_date float-start">Joe Walters - September 9,2022</a>
                                         <span class="count"><i class="fa-regular fa-newspaper me-1 "></i>8</span>
@@ -213,8 +216,8 @@
                                 </div>
                             </article>
                         </div>
-                        <div class="col-6">
-                            <ul class="news_list d-flex flex-column gap-4">
+                        <div class="col">
+                            <ul class="news_list d-flex flex-column gap-4 my-3 my-sm-0">
                                 <li>
                                     <div class="d-flex gap-2">
                                         <img src="images/n-3.jpeg" class="n_img">
@@ -260,8 +263,8 @@
                         <img src="images/ad-2.png" alt="" class="ad">
                     </div>
                     <!-- other news content -->
-                    <div class="row row-cols-2 my-5">
-                        <div id="general_news" class="col-6">
+                    <div class="row row-cols-md-2 row-cols-auto my-5">
+                        <div id="general_news" class="col">
                             <div class="sec-heading bd-top-g">
                                 <h2>General</h2>
                             </div>
@@ -329,7 +332,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div id="event_news" class="col-6">
+                        <div id="event_news" class="col">
                             <div class="sec-heading bd-top-b">
                                 <h2>Events</h2>
                             </div>
@@ -338,12 +341,12 @@
                                     <img src="images/news-1.jpeg" alt="" />
                                 </div>
                                 <a href="#" class="news_category my-3 b-bg">Architecture</a>
-                                <h3> <a href="#" class="article-heading">Using 7 strategies like the pros life
-                                        is a gift, and it offers us...</a></h3>
+                                <h3><a href="#" class="article-heading">Using 7 strategies like the pros lifeis a gift,
+                                        and it offers us...</a></h3>
                                 <div class="d-flex gap-2">
                                     <a href="#" class="article_details">
-                                        <span class="writer-name">Thomas Young</span> - <span class="article_date">June
-                                            24, 2022</span>
+                                        <span class="writer-name">Thomas Young</span> - <span
+                                            class="article_date">June24, 2022</span>
                                         <a href="#" class="count ms-auto me-2"> <i
                                                 class="fa-regular fa-newspaper me-1 "></i> 8 </a>
                                     </a>
@@ -402,11 +405,11 @@
                     </div>
                     <!-- other news content ended -->
                 </div>
-                <div id="s_media" class="col-3 p-0">
-                    <div class="sec-heading me-auto d-flex align-items-center justify-content-between">
-                        <h2 class="text-uppercase m-0">Follow Us</h2>
+                <div id="s_media" class="col-3 d-md-block d-none">
+                    <div class="sec-heading">
+                        <h2>Follow Us</h2>
                     </div>
-                    <ul class="d-flex column-gap-3 flex-wrap my-4">
+                    <ul class="d-flex gap-4 flex-wrap my-4">
                         <li>
                             <a href="#" class="scoial_media">
                                 <i class="fa-brands fa-facebook-f"></i>
@@ -447,12 +450,12 @@
                 </div>
             </div>
             <div class="container">
-                <div class="row row-cols-2 justify-content-between p-0">
-                    <div id="top_news" class="col-8 p-0">
+                <div class="row row-cols-md-2 row-cols-auto justify-content-between">
+                    <div id="top_news" class="col-md-8 col-12">
                         <div class="sec-heading">
                             <h2>Top News</h2>
                         </div>
-                        <ul class="row row-cols-3 g-2">
+                        <ul class="row row-cols-md-3 row-cols-sm-2 g-2">
                             <li>
                                 <article class="article">
                                     <div class="article_img">
@@ -582,7 +585,7 @@
                         <button class="next">Next</button>
                         <span class="pageshow">Showing 1 of 10</span>
                     </div>
-                    <div id="lastest-news" class="col-3 p-0">
+                    <div id="lastest-news" class="col-md-3 col-12">
                         <div class="sec-heading">
                             <h2>Lastest Reviews</h2>
                         </div>
@@ -666,7 +669,7 @@
                     </div>
                 </div>
                 <div id="news_grid" class="row">
-                    <div class="col-3">
+                    <div class="col-md-3 col-sm-6">
                         <article class="news_article">
                             <img src="images/news-4.jpeg" alt="">
                             <div class="play_btn">
@@ -679,7 +682,7 @@
                             </div>
                         </article>
                     </div>
-                    <div class="col-3">
+                    <div class="col-md-3 col-sm-6">
                         <article class="news_article">
                             <img src="images/news-4.jpeg" alt="">
                             <div class="play_btn">
@@ -692,7 +695,7 @@
                             </div>
                         </article>
                     </div>
-                    <div class="col-3">
+                    <div class="col-md-3 col-sm-6">
                         <article class="news_article">
                             <img src="images/news-4.jpeg" alt="">
                             <div class="play_btn">
@@ -705,7 +708,7 @@
                             </div>
                         </article>
                     </div>
-                    <div class="col-3">
+                    <div class="col-md-3 col-sm-6">
                         <article class="news_article">
                             <img src="images/news-4.jpeg" alt="">
                             <div class="play_btn">
@@ -723,7 +726,7 @@
         </section>
         <section id="featured_news" class="container">
             <div class="row justify-content-between">
-                <div class="col-8">
+                <div class="col-md-8">
                     <div class="bg-color">
                         <div class="sec-heading">
                             <h2>Featured</h2>
@@ -751,7 +754,7 @@
                                     <a href="#" class="readme_btn ">Read More</a>
                                 </div>
                             </article>
-                            <ul class="row row-cols-2">
+                            <ul class="row row-cols-md-2">
                                 <li>
                                     <article class="article">
                                         <div class="article_img">
@@ -820,7 +823,7 @@
                     </div>
                     <img src="images/ad-2.png" alt="">
                 </div>
-                <div class="col-3">
+                <div class="col-md-3 my-2 my-md-0">
                     <div class="sec-heading">
                         <h2>Popular Categories</h2>
                     </div>
@@ -851,17 +854,17 @@
                                 <span class="number">12</span>
                             </a></li>
                     </ul>
-                    <img src="images/ad-1.png" alt="">
+                    <img src="images/ad-1.png" alt="" class="d-none d-md-block">
                 </div>
             </div>
         </section>
         <section class="container">
             <div class="row justify-content-between">
-                <div class="col-8">
+                <div class="col-md-8">
                     <div class="sec-heading">
                         <h2>Lastest Posts</h2>
                     </div>
-                    <div class="row row-cols-2">
+                    <div class="row row-cols-md-2">
                         <article class="article">
                             <div class="article_img">
                                 <img src="images/news-1.jpeg" alt="">
@@ -946,7 +949,7 @@
                     <div class="line"></div>
                     <a href="" class="load_btn">Load More</a>
                 </div>
-                <div class="col-3">
+                <div class="col-md-3 my-2 my-md-0">
                     <div id="tab">
                         <div class="tabs_links">
                             <button class="active" data-tab="tab1"><i class="fa-regular fa-clock"></i></button>
@@ -1146,10 +1149,11 @@
                         </ul>
                     </div>
                     <div id="contact_block">
-                        <i class="fa-solid fa-envelope"></i>    
+                        <i class="fa-solid fa-envelope"></i>
                         <h4 class="headline">Get More Stuff</h4>
                         <div class="line"></div>
-                        <p class="details">Subscribe to our mailing list and get interesting stuff and updates to your email inbox.</p>
+                        <p class="details">Subscribe to our mailing list and get interesting stuff and updates to your
+                            email inbox.</p>
                         <input type="text" placeholder="Enter first name">
                         <input type="email" placeholder="Enter your email" required>
                         <input type="submit">
@@ -1161,14 +1165,15 @@
     <footer>
         <div class="container">
             <div id="footer_sidebar" class="row">
-                <div class="col-3">
+                <div class="col-lg-3">
                     <img src="images/logo.png" alt="">
                 </div>
-                <div class="col-7">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor odio sed justo porttitor ullamcorper. Duis eu ultricies massa.</p>
+                <div class="col-lg-7">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor odio sed justo
+                        porttitor ullamcorper. Duis eu ultricies massa.</p>
                 </div>
-                <div class="col-2">
-                    <ul class="d-flex gap-3">
+                <div class="col-lg-2">
+                    <ul class="d-flex gap-3 justify-content-center">
                         <li><a href="#" class="fa-brands fa-facebook-f footer-links"></a></li>
                         <li><a href="#" class="fa-brands fa-twitter footer-links"></a></li>
                         <li><a href="#" class="fa-brands fa-pinterest-p footer-links"></a></li>
@@ -1181,10 +1186,10 @@
         <div class="line"></div>
         <div class="container">
             <div class="row">
-                <div id="trending" class="col-3">
+                <div id="trending" class="col-lg-3">
                     <h5># Trending</h5>
                 </div>
-                <div id="footer_tag" class="col-9">
+                <div id="footer_tag" class="col-lg-9">
                     <a href="" class="footer_tag_items">theme</a>
                     <a href="" class="footer_tag_items">landing</a>
                     <a href="" class="footer_tag_items">shop</a>
@@ -1197,7 +1202,29 @@
                     <a href="" class="footer_tag_items">share</a>
                 </div>
             </div>
-        
+        </div>
+        <div id="copyright_section">
+            <div class="container">
+                <div class="row g-2">
+                    <div class="col-lg-8">
+                        <h6 class="merimag_copyright"> © Copyright 2024, All Rights Reserved</h6>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul class="merimag_links d-flex justify-content-center gap-3">
+                            <li><a href="">About</a></li>
+                            <li><a href="">Privacy</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                        <ul class="d-flex gap-4 justify-content-center sc-links">
+                            <li><a href="#" class="fa-brands fa-facebook-f footer-links"></a></li>
+                            <li><a href="#" class="fa-brands fa-twitter footer-links"></a></li>
+                            <li><a href="#" class="fa-brands fa-pinterest-p footer-links"></a></li>
+                            <li><a href="#" class="fa-brands fa-instagram footer-links"></a></li>
+                            <li><a href="#" class="fa-regular fa-envelope footer-links"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="javascript/index.js"></script>

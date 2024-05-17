@@ -1,5 +1,4 @@
 * {
-
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -17,6 +16,7 @@
     --text-color: #cbcbcb;
     --font: "Inter", sans-serif;
 }
+
 
 body {
     font-family: "Inter", sans-serif;
@@ -63,31 +63,11 @@ section {
 
 .container {
     max-width: 1140px;
-    padding: 0;
 }
 
-.bd {
-    border: 1px solid #000;
-}
-
-/* site ads css */
 .ad {
-    width: 95%;
-    margin: 30px 10px 0 auto;
-}
-
-/* site ads css */
-
-.main-btn {
-    border-radius: 10px;
-    color: var(--color);
-    font: 700 12px var(--font);
-    background: var(--primary-color);
-}
-
-.ad-btn {
-    top: 22px;
-    right: 20px;
+    width: 100%;
+    margin-block: 20px;
 }
 
 .red {
@@ -150,6 +130,11 @@ section {
         color: var(--black);
         text-transform: uppercase;
         font: 500 13px var(--font);
+    }
+
+    .section_links {
+        display: flex;
+        gap: 20px;
     }
 }
 
@@ -285,7 +270,6 @@ section {
     }
 
     .title {
-        max-width: 265px;
         color: var(--black);
         font: 700 16px var(--font);
 
@@ -311,11 +295,6 @@ section {
     transition: all .5s;
 }
 
-/* #s_media.fixed {
-    position: fixed;
-    top: 0;
-    transition: all .7s;
-} */
 
 .scoial_media {
     display: flex;
@@ -357,7 +336,21 @@ header {
     background: var(--secondary-color);
     font: 400 13px var(--font);
 
-    .info-links,
+    .top_links {
+        display: flex;
+        align-items: center;
+
+        .info-links {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+            .links {
+                color: var(--color);
+            }
+        }
+    }
+
     .social-links {
         color: var(--color);
 
@@ -367,12 +360,18 @@ header {
     }
 }
 
+#site-time {
+    display: flex;
+    align-items: center;
+}
+
 #site-time,
 .fa-clock {
     color: var(--text-color);
 }
 
 #tag {
+    text-transform: uppercase;
     padding: 16px 10px;
     color: var(--color);
     background: var(--primary-color);
@@ -380,15 +379,44 @@ header {
 
 #headlines {
     padding-block: 15px;
-    margin-left: 20px;
+    margin: 0 auto;
     display: flex;
-    overflow: hidden;
 
     .head_news {
         color: var(--color);
 
         .news_date {
             color: var(--text-color);
+        }
+    }
+}
+
+#merimag_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .merimag-logo i {
+        display: none;
+    }
+
+    .ad_block {
+        padding: 10px 0;
+        position: relative;
+
+        .ad-btn {
+            position: absolute;
+            inset-block: 32%;
+            right: 20px;
+        }
+
+        .main-btn {
+            text-transform: uppercase;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: var(--color);
+            font: 700 12px var(--font);
+            background: var(--primary-color);
         }
     }
 }
@@ -402,6 +430,8 @@ nav {
 }
 
 #primary-menu {
+    display: flex;
+
     a.active {
         color: var(--primary-color);
         border-top: 3px solid var(--primary-color);
@@ -424,7 +454,7 @@ nav {
     & a {
         line-height: 48px !important;
         color: var(--black);
-        padding-inline: 15px;
+        margin-inline: 10px;
         text-transform: uppercase;
         font: 600 13px var(--font);
         position: relative;
@@ -538,18 +568,6 @@ nav {
 
     .item-2 {
         height: 180px;
-    }
-}
-
-@media (max-width: 992px) {
-    #news_masonary {
-        columns: 2;
-    }
-}
-
-@media (max-width: 576px) {
-    #news_masonary {
-        columns: 1;
     }
 }
 
@@ -776,11 +794,13 @@ nav {
         }
     }
 }
-.line{
+
+.line {
     margin-top: 10px;
     border: 0.5px solid #e5e5e5;
 }
-.load_btn{
+
+.load_btn {
     width: 100%;
     text-transform: uppercase;
     text-align: center;
@@ -790,6 +810,7 @@ nav {
     color: var(--color);
     background: var(--primary-color);
 }
+
 /* tabs css */
 #tab {
     padding: 0;
@@ -818,7 +839,8 @@ nav {
             border: 1px dashed var(--primary-color);
             color: var(--primary-color);
             background: var(--color);
-            &:hover{
+
+            &:hover {
                 border-style: none;
             }
         }
@@ -826,7 +848,7 @@ nav {
 
     .tab_content {
         margin-top: 20px;
-        padding-bottom:10px ;
+        padding-bottom: 10px;
         display: none;
 
         .article {
@@ -840,38 +862,45 @@ nav {
                 height: 80px;
             }
         }
-        .comments{
+
+        .comments {
             display: flex;
             gap: 20px;
             align-items: center;
             margin: 10px;
-            & p{
+
+            & p {
                 margin: 0;
             }
-            .user_img img{
+
+            .user_img img {
                 border-radius: 50%;
             }
-            .desc .user_name{
+
+            .desc .user_name {
                 color: #6d6d6d;
                 font: 700 16px var(--font);
             }
-            .desc .usesr_comment{
-                color:var(--grey);
+
+            .desc .usesr_comment {
+                color: var(--grey);
                 font: 500 16px var(--font);
-                &:hover{
+
+                &:hover {
                     color: var(--primary-color);
                 }
             }
         }
     }
-    .tab_content.show{
+
+    .tab_content.show {
         display: block;
     }
 }
 
 /* tabs css ended */
 /* contact block */
-#contact_block{
+#contact_block {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -879,54 +908,66 @@ nav {
     margin-top: 20px;
     color: var(--color);
     background: var(--primary-color);
-    & i{
+
+    & i {
         font-size: 70px;
-        margin-block:10px 25px;
+        margin-block: 10px 25px;
     }
-    .headline{
+
+    .headline {
+        text-align: center;
         font: 700 28px var(--font);
     }
-    .line{
+
+    .line {
         width: 80px;
         height: 1px;
-        margin-block:10px  25px;
+        margin-block: 10px 25px;
         background: var(--color);
     }
-    .details{
+
+    .details {
         font: 400 16px/20px var(--font);
         text-align: center;
         margin-bottom: 25px;
     }
-    & input{
+
+    & input {
         border: 0;
         padding: 10px;
         width: 100%;
         margin-block: 10px;
-        &[type="submit"]{
+
+        &[type="submit"] {
             text-transform: uppercase;
             color: var(--grey);
             background: var(--color);
         }
     }
 }
+
 /* Main css ended */
 /* footer */
-footer{
+footer {
     color: var(--color);
     background: var(--secondary-color);
-    .line{
+
+    .line {
         width: 100%;
         height: 1px;
         background: #2f2f2f;
     }
 }
-#footer_sidebar{
+
+#footer_sidebar {
     padding: 30px;
-    & p{
+
+    & p {
         margin: 0;
         color: var(--color);
     }
-    .footer-links{
+
+    .footer-links {
         font-size: 14px;
         border-radius: 5px;
         padding: 10px;
@@ -934,23 +975,148 @@ footer{
         background: var(--primary-color);
     }
 }
-#trending{
-    margin-block:40px;
-    & h5{
+
+#trending {
+    margin-block: 40px;
+
+    & h5 {
         text-transform: uppercase;
         font: 700 26px var(--font);
         text-align: center;
     }
 }
-#footer_tag{
+
+#footer_tag {
     display: flex;
     gap: 20px;
     align-items: center;
-    .footer_tag_items{
+
+    .footer_tag_items {
         font: 500 16px var(--font);
         padding: 10px;
         border-radius: 5px;
         border: 1px solid var(--color);
         color: var(--color);
+    }
+}
+
+#copyright_section {
+    padding: 30px;
+    background: #111111;
+
+    .merimag_copyright {
+        font: 400 14px var(--font);
+    }
+
+    .merimag_links {
+        float: left;
+    }
+
+    .footer-links,
+    .merimag_links a {
+        font-size: 14px;
+        color: var(--color);
+
+        &:hover {
+            color: var(--primary-color);
+        }
+    }
+}
+
+/* media query */
+@media (max-width: 1200px) {
+    body {
+        border: 1px solid #000;
+    }
+}
+
+@media (max-width: 992px) {
+    section {
+        margin-block: 50px;
+    }
+
+    #news_masonary {
+        columns: 2;
+    }
+
+    #merimag_header {
+        padding: 15px 0;
+
+        .merimag-logo {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            .fa-solid {
+                display: block;
+            }
+
+            .fa-magnifying-glass {
+                margin-left: auto;
+            }
+        }
+    }
+
+    #footer_sidebar {
+        & img {
+            max-width: 50%;
+            margin: 20px auto;
+        }
+
+        & p {
+            text-align: center;
+            margin: 20px 0;
+        }
+    }
+
+    #footer_tag {
+        margin: 20px 0;
+        overflow: hidden;
+    }
+
+    #copyright_section {
+        .merimag_copyright {
+            text-align: center;
+        }
+
+        .merimag_links {
+            float: none;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    section {
+        margin-block: 40px;
+    }
+
+    .sec-heading .section_links {
+        & :nth-child(7) {
+            display: none;
+        }
+
+        & :nth-child(6) {
+            display: none;
+        }
+
+        & :nth-child(5) {
+            display: none;
+        }
+    }
+
+    #lastest-news {
+        margin: 20px 0;
+    }
+
+    #news_grid .news_article {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    #news_masonary {
+        columns: 1;
     }
 }
