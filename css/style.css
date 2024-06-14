@@ -290,6 +290,8 @@ section {
 
 /* scoial media links  css*/
 #s_media {
+    position: sticky;
+    top: 0px;
     background: var(--color);
     max-width: 290px;
     transition: all .5s;
@@ -325,7 +327,11 @@ section {
         font: 500 12px var(--font);
     }
 }
-
+#lastest-news{
+    margin-top: 20px;
+    position: sticky;
+    top: 0px;
+}
 /* header css  */
 header {
     border-top: 3px solid var(--primary-color);
